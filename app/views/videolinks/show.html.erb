@@ -1,0 +1,16 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Link:</strong>
+  <%= @videolink.link %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= youtube_embed(@videolink.link) %>
+
+</p>
+
+<%= link_to 'Edit', edit_videolink_path(@videolink) %> |
+<%= link_to 'Back', videolinks_path %>
+<iframe width="854" height="480" src="https://www.youtube.com/embed/<%= youtube_embed(@videolink.link) %>" frameborder="0" allowfullscreen></iframe>
